@@ -1,0 +1,923 @@
+body{
+    background-color:rgb(0, 0, 0);
+    margin:0%;
+}
+#overall{
+    display: flex;
+    flex-direction: column;
+}
+@font-face {
+    font-family: gilroy;
+    src: url(Gilroy-Bold.ttf);
+}
+@font-face {
+    font-family: sofia;
+    src: url(Sofia\ Pro\ Semi\ Bold\ Az.otf);
+}
+@font-face {
+    font-family: futura;
+    src: url(Futura\ Heavy\ Italic\ font.ttf);
+}
+@font-face {
+    font-family: goth;
+    src: url(TitlingGothicFBWide-Bold-AF65ddb136479f5.otf);
+}
+#footer{
+    height:100vh;
+    width:10vw;
+    background-color:rgb(0, 0, 0) ;
+    border-width: 2px;
+    border-style: solid;
+    border-color: silver;
+    border-left-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    z-index: 100; 
+}
+@keyframes movein{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+#footerholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80%;
+    animation: movein ease-in-out;
+    animation-duration: 4s;
+}
+.footertext{
+    font-family: poppins;
+    color: white;
+    font-size: 20px;
+    transition: height 0.75s ease-in-out, width 0.75s ease-in-out; /* Smooth transition */
+}
+.footertext:hover{
+    font-family: poppins;
+    color: white;
+    font-size: 22px;
+}
+.footertextactive{
+    font-family: poppins;
+    font-weight: 500;
+    color: white;
+    font-size: 25px;
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1);
+}
+#navbar {
+    width: 100%; 
+    max-width: 20rem;
+    height: 5rem;
+    position: fixed;
+    top: 0;  
+    left: 0; 
+    right: 0; 
+    margin: 0 auto; 
+    z-index: 10000;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    animation: nav ease-in-out;
+    animation-duration: 2s;
+}
+@keyframes nav{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+#navbarholder{
+    background-color: rgba(255, 255, 255,0.8);
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255,0.6);
+}
+.navelements{
+    background-color: white;
+    width: 6rem;
+    height:3rem;
+    border-radius: 10rem;
+    padding-bottom: 5px;
+    
+}
+.navtext{
+    font-family: poppins;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+#welcome{
+    margin-left: 10%;
+    margin-top:15rem;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: url(welcome\ bg.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+
+}
+#wel{
+    font-family: gilroy;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}  
+#to{
+    font-family: gilroy;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin-top: -6rem;
+    animation: fadein ease-in-out;
+    animation-duration: 6s;
+    
+} 
+
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+#name{
+    font-family: goth;
+    font-size: 7rem;
+    text-align: center;
+    color: white;
+    background: linear-gradient( #7c0f0f, #f70000); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -1rem;
+    text-shadow: 0px 0px 14px rgba(255, 0, 0, 0.6);
+}
+#movein {
+    overflow: hidden; /* Prevents overflow of the animated text */
+    white-space: nowrap; /* Prevents line breaks */
+    width: 100%; /* Ensures the container takes full width */
+    position: relative; /* Allows absolute positioning of child */
+    height: 100px; /* Set height to avoid collapsing */
+    margin-top: 8%;
+}
+
+.animate {
+    display: inline-block; 
+    font-family: goth; /* Make sure this font is available */
+    font-size: 3rem;
+    position: absolute; 
+    bottom: 0; 
+    left: 100%; /* Start just outside the right edge */
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+    text-shadow: 
+        -1px -1px 0 rgba(255, 255, 255, 1),  
+         1px -1px 0 rgba(255, 255, 255, 1),
+        -1px 1px 0 rgba(255, 255, 255, 1),  
+         1px 1px 0 rgba(255, 255, 255, 1);
+    animation: infini 30s linear infinite; 
+}
+
+@keyframes infini {
+    from { transform: translateX(0); } /* Start from the right */
+    to { transform: translateX(-200%); } 
+}
+
+#about{
+    margin-left: 10%;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+}
+.header{
+    font-family: gilroy;
+    font-size: 4rem;
+    color: white;
+    padding-left: 2rem;
+}
+#intro{
+    font-family:poppins;
+    font-size:20px;
+    text-align: left;
+    color: white;
+    padding-left: 2rem;
+}
+#education{
+    margin-left: 10%;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    margin-top: -15%;
+}
+#button1{
+    margin-left: 5vw;
+    margin-top: -8%;
+}
+#ulist1{
+    margin-left: 3vw;
+}
+.edulist{
+    font-family: lato;
+    color: white;
+    font-size: 25px;
+}
+#projects{
+    margin-left: 10vw;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    margin-top: -40vh;
+}
+#projectholder{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    justify-content:space-evenly;
+}
+.card {
+    height: 50vh;
+    width: 25vw;
+    /*background-image: url(messitest.webp);*/
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image */
+    border-style: solid;
+    border-color: silver;
+    border-width: 1px;
+    border-radius: 6%;
+    position: relative;
+    overflow: hidden;   
+    margin: 10%;
+    flex-wrap: wrap;
+    transition: height 0.25s ease-in-out, width 0.25s ease-in-out; /* Smooth transition */
+}
+
+.card:hover {
+    height: 60vh; /* New height on hover */
+    width: 30vw;  /* New width on hover */
+}
+.card:hover .descheader {
+    font-size: 50px;
+    bottom: 30%;
+}
+.card:hover .subdesc {
+    opacity: 1; /* Make it visible */
+    color: rgb(216, 0, 0); /* Change to desired color */
+    font-size: 50px; /* Larger size on hover */
+    bottom: 30%; /* Adjust position */
+}
+/*.subdesc {
+    color: rgb(216, 0, 0);
+    font-family: poppins;
+    font-size: 30px;
+    margin-top: 10px;
+    z-index: 14;
+    margin-top: -100%;
+}*/
+
+.card::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0;
+    bottom: 0; 
+    background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8)); 
+    z-index: 1; 
+    border-radius: 6%;
+}
+.descheader{
+    font-family: sofia;
+    font-size: 30px;
+    padding-top: 75%;
+    padding-left:10%;
+    padding-right:20%;
+    padding-bottom:20%;
+    color: white;
+    position: relative;
+    z-index: 2; 
+}
+/*.descheader:hover{
+    font-size: 50px;
+}*/
+.video{
+    position: absolute; /* Position video absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes video fill the card */
+    height: 100%; /* Makes video fill the card */
+    object-fit:cover; /* Ensures the video covers the area */
+    z-index: 0; /* Ensures video is behind text */
+    border-radius: 6%;
+}
+#skills{
+
+    margin-left: 10vw;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    clear: both;
+    margin-top: -10%;
+}
+.subheader{
+    font-family: sofia;
+    font-size: 3rem;
+    color: white;
+   
+}
+.subclass{
+    margin-left: 5vw;
+    width: 80vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+}
+#stackholder{
+    margin-left: 5vw;
+    width: 80vw;
+    height: 100vh;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    margin-top: -20%;
+}
+.logoimg{
+    border-radius: 6%;
+    position: relative;
+    z-index: 4;
+}
+.logoimg:hover{
+    height: 10rem;
+}
+.nametext{
+    font-family: poppins;
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    margin-top: -5%;
+  
+}
+.logoimg:hover + .nametext {
+    transform: translateY(100px); /* Move down */
+    font-size: 2rem; /* Increase size */
+    animation: move ease-in-out;
+    animation-duration: 0.5s;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0); opacity: 0;
+    }
+    50% {
+        transform: translateY(40px); opacity: 0; /* Midpoint */
+    }
+    100% {
+        transform: translateY(100px); opacity: 1;/* End point */
+    }
+}
+#nontech{
+    margin-top: -20%;
+}
+.ulist{
+    margin-left: 2rem;
+}
+#experience{
+    margin-left: 10vw;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    margin-top: 30%;
+}
+#expholder{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.explist{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.exps{
+    font-family: poppins;
+    font-size: 2rem;
+    color: white
+}
+.explogo{
+    height: 4rem;
+    width:auto;
+    margin: 1rem;
+    border-radius: 6%;
+    transition: height 0.25s ease-in-out, width 0.25s ease-in-out; /* Smooth transition */
+}
+.explogo:hover {
+    height: 5.5rem;
+    width: auto;
+}
+#extracurr{
+    margin-left: 10vw;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    margin-top: 10%;
+}
+#extraholder{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.extras{
+    font-family: poppins;
+    color:white;
+    font-size: 2rem;
+}
+#contact{
+    margin-left: 10vw;
+    background-color: white;
+    width:100%;
+    height: 30vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 10%;
+}
+#special{
+    font-family: poppins;
+    font-size: 3rem;
+    text-align: center;
+
+}
+#contactholder{
+    height: 100vh;
+    width:50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contactimg{
+    height: 3rem;
+    width:auto;
+    border-style: solid;
+    border-color: silver;
+    border-width: 2px;
+    border-radius: 50%;
+    transition: height 0.25s ease-in-out, width 0.25s ease-in-out; /* Smooth transition */
+}
+.contactimg:hover{
+    height: 4rem;
+    width:auto;
+}
+#certification{
+    margin-left: 10vw;
+    width: 90vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:start;
+    margin-top: 20%;
+}
+#achiholder{
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 5%;
+}
+.button{
+    height: auto;
+    width: 8rem;
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-radius: 5rem;
+    border-color: white;
+    border-width: 2px;
+    transition: width 0.3s ease, height 0.3s ease; 
+}
+.button:hover{
+    height: auto;
+    width: 10rem;
+}
+.button:hover.buttontext{
+    font-family: poppins;
+    font-weight: 900;
+}
+.buttontext{
+    font-family: poppins;
+    color: white;
+    text-align: center;
+
+}
+.highlight{
+    font-size: 22px;
+    font-weight: 600;
+}
+#massivecontainer{
+    margin-top: -25%;
+}
+@media (max-width:1550px){
+    .card{
+        width: 500px;
+        height:750px;
+    }
+    #nontech{
+        margin-top: -35%;
+    }
+    #experience{
+        margin-top: 70%;
+        margin-bottom: 35%;
+    }
+    .logoimg{
+        width: 200px;
+        height: 200px;
+    }
+    #skills{
+        margin-top: -20%;
+        margin-bottom:30% ;
+    }
+    #nontech{
+        margin-top: -15%;
+    }
+}   
+@media (max-width:1250px){
+    .card{
+        width: 500px;
+        height:750px;
+    }
+    #nontech{
+        margin-top: -15%;
+    }
+    #experience{
+        margin-top: 60%;
+    }
+    .logoimg{
+        width: 190px;
+        height: 190px;
+    }
+    #extracurr{
+        margin-top: 40%;
+    }
+    .card{
+        height: 500px;
+        width: 500px;
+    }
+} 
+@media (max-width:1110px){
+    .card{
+        width: 500px;
+        height:750px;
+    }
+    #nontech{
+        margin-top: -35%;
+    }
+    #experience{
+        margin-top: 30%;
+    }
+    .logoimg{
+        width: 170px;
+        height: 170px;
+    }
+    #certification{
+        margin-top: 60%;
+    }
+    #extracurr{
+        margin-top: -10%;
+    }
+    .footertext{
+        font-size: 12px;
+    }
+    .footertext:hover{
+        font-size: 14px;
+    }
+    .footertextactive{
+        font-size: 15px;
+    }
+    .logoimg{
+        width: 150px;
+        height: 150px;
+    }
+    .card{
+        height: 400px;
+        width: 400px;
+    }
+}     
+@media (max-width:1000px){
+    .card{
+        width: 400px;
+        height:400px;
+    }
+    #nontech{
+        margin-top: -45%;
+    }
+    .logoimg{
+        width: 150px;
+        height: 150px;
+    }
+    #certification{
+        margin-top: 70%;
+    }
+    .footertext{
+        font-size: 10px;
+    }
+    .footertext:hover{
+        font-size: 14px;
+    }
+    .footertextactive{
+        font-size: 15px;
+    }
+}  
+@media (max-width: 750px) {
+    .animate {
+        margin-top: 50%;
+    }
+    #about {
+        margin-top: -10px;
+    }
+    #button1 {
+        margin-top: -10%;
+    }
+    #projects {
+        margin-top: -80%;
+    }
+    .card{
+        width: 300px;
+        height:300px;
+    }
+    #certification{
+        margin-top:280%;
+    }
+    .logoimg{
+        height: 100px;
+        width: 100px;
+    }
+    #extracurr{
+        margin-top: 10%;
+    }
+    .explogo{
+        width: auto;
+        height:60px;
+    }
+    #footer{
+        height: 100%;
+    }
+    #name{
+        font-size: 4.5rem;
+    }
+    #to{
+        margin-top: 0%;
+        font-size: 1.5rem;
+    }
+    #wel{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .logoimg {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .animate {
+        font-size: 1rem !important;
+    }
+    
+    #name {
+        margin-top: 7% !important;
+        margin-bottom: 10% !important;
+        font-size: 2.7rem !important;
+    }
+    
+    #to {
+        margin-top: 0% !important;
+        font-size: 1rem !important;
+        margin-bottom: 30%;
+    }
+    
+    #wel {
+        font-size: 1rem !important;
+
+    }
+    #about{
+        margin-top: -10% !important;
+    }
+    #intro{
+        font-size:15px;
+    }
+    .highlight{
+        font-size: 17px;
+    }
+    #button1{
+        height: 50px;
+        width: auto;
+        margin-top: -40%!important ;
+    }
+    #knowbutton{
+        font-size: 12px;
+    }
+    #projects{
+        margin-top: -140% !important;
+    }
+    .card {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    #footer{
+        width: 12%;
+    }
+    .header{
+        font-size: 50px;
+    }
+    .footertext{
+        font-size: 8px;
+    }
+    .footertext:hover{
+        font-size: 8px;
+    }
+    .footertextactive{
+        font-size: 8px;
+    }
+    .exps{
+        font-family: poppins;
+        font-size: 1.2rem;
+        color: white
+    }
+    .explogo{
+        height: 40px !important;
+        width: auto;
+    }
+    #certification{
+        margin-top: 200% !important;
+    }
+    #skills{
+        margin-top: -50%;
+    }
+    .logoimg{
+        height: 78px !important;
+        width: 78px !important ;
+        margin-top: -100%!important;
+    }
+    #extracurr{
+        margin-bottom: 50% !important;
+    }
+    .extras{
+        font-size: 20px;
+    }
+    .nametext{
+        font-size: 0rem !important;
+    }
+    #extracurr{
+        margin-top: 100% !important;
+    }
+    #footerholder{
+        margin-top: 600%;
+    }
+}
+@media (max-width:300px) {
+    /*#navbar{
+        width: 10rem; 
+        height: 5rem;
+    }
+    #navbarholder{
+        width: 10rem;
+        height: 4rem;
+    }
+    .navelements{
+        width: 3rem;
+        height:3rem;
+    }
+    .navtext{
+        font-size: 15px;
+    }*/
+    #footer{
+        width:14%;
+    }
+    #footerholder{
+        margin-top: 600%;
+    }
+    #welcome{
+        margin-top: 10% !important;
+        background-size:cover;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat;
+        margin-left: 17% !important;
+        width: 100vw;
+    }
+    #wel{
+        margin-top: 60% !important;
+    }
+    #name{
+        font-size: 1.7rem !important ;
+        margin-top: 10% !important;
+    }
+    #about{
+        margin-top: -17% !important;
+    }
+    #projects{
+        margin-top: -220% !important;
+    }
+    #intro{
+        font-size: 12px;
+    }
+    .highlight{
+        font-size: 13px;
+    }
+    #button1{
+        margin-top: -100%!important;
+    }
+    #projects{
+        margin-top: -300% !important;
+    }
+    #experience{
+        margin-top: 120%;
+        margin-left: 16%;
+    }
+    #certification{
+        margin-top: 400% !important;
+        margin-left: 16%;
+    }
+    #skills{
+        margin-left: 16%!important;
+        margin-top: -150% !important;
+    }
+    #extracurr{
+        margin-left: 16%!important;
+        margin-top: 180%!important;
+    }
+    .contactimg{
+        height: 30px;
+        width: auto;
+    }
+    .header{
+        font-size: 40px;
+    }
+    #contact{
+        margin-left: 10vw;
+        width: 107vw;
+        height: 20vh;
+    }
+    #special{
+        font-size: 25px;
+    }
+}
+@media (max-height:725px){
+    #contact{
+        height:250px;
+    }
+}  
+@media (max-height:500px){
+    #contact{
+        height:250px;
+    }
+    #nontech{
+        margin-top: 5px;
+    }
+    #extracurr{
+        margin-top: 400px;
+    }
+    .stacks{
+        margin-top: 100px;
+    }
+    #projects{
+        margin-top: 100px;
+    }
+    #about{
+        margin-top: 100px;
+    }
+}   
